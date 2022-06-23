@@ -1,7 +1,7 @@
 import createCharacterCard from './card.js';
 import State from './state.js';
 const DIV = document.getElementsByClassName('characters')[0];
-const $errorMessage = document.getElementsByClassName('error-message')[0];
+const ERROR_MESSAGE = document.getElementsByClassName('error-message')[0];
 const NEXT = document.getElementsByClassName('characters__button-btn')[0];
 
 class DataLoader extends State {
@@ -12,7 +12,7 @@ class DataLoader extends State {
       if (response.status >= 200 && response.status <= 299) {
         return response.json();
       } else {
-        $errorMessage.style.display='block';
+        ERROR_MESSAGE.style.display='block';
         throw new Error('page not found');
       }  
     }
@@ -23,7 +23,7 @@ class DataLoader extends State {
 
   emptyResultsContent() {
     DIV.innerHTML = '';
-    $errorMessage.style.display='none';
+    ERROR_MESSAGE.style.display='none';
     NEXT.style.display='none';
   }
 

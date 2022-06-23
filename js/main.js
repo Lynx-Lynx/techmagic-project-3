@@ -1,10 +1,8 @@
 const NEXT = document.getElementsByClassName('characters__button-btn')[0];
 const SEARCH = document.getElementsByClassName('searchbox__button-btn')[0];
 const FILTER = document.getElementsByClassName('filter__button-btn')[0];
-const $input = document.getElementsByClassName('searchbox__input-field')[0];
-const $selector = document.getElementsByClassName('select__options-gender')[0];
-
-//SPECIES: Human, Alien, Robot, Animal, Humanoid, Mythological Creature, unknown, Disease, Cronenberg, Poopybutthole
+const INPUT = document.getElementsByClassName('searchbox__input-field')[0];
+const SELECTOR = document.getElementsByClassName('select__options-gender')[0];
 
 import Loader from './modules/loader.js';
 const creatures = new Loader();
@@ -18,12 +16,12 @@ function onLoad() {
 }
 
 function onFilter() {
-  creatures.filterCharacter($selector.value);
+  creatures.filterCharacter(SELECTOR.value);
 }
 
 function onSearch() {
-  creatures.searchCharacter($input.value);
-  $input.value = '';
+  creatures.searchCharacter(INPUT.value);
+  INPUT.value = '';
 }
 
 window.addEventListener('load', onWindowLoad)
