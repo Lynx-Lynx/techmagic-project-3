@@ -1,0 +1,162 @@
+body {
+  background-color: #f9fff8;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 16px;
+}
+
+label {
+  font-weight: 700;
+}
+
+/*---------------------helper styles--------------------*/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+/*---------------------header--------------------*/
+.header {
+  background-color: #282a42;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -45px;
+}
+.header__logo-img {
+  height: 300px;
+}
+
+.header__text {
+  padding: 0 0 30px;
+  font-size: 3rem;
+  text-align: center;
+  color: transparent;
+  font-weight: 900;
+  -webkit-text-stroke: 1px rgb(238, 238, 161);
+}
+
+/*-------------------input--------------*/
+.searchbox {
+  position: sticky;
+  top: 0px;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.searchbox__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 60px;
+  box-shadow: 0px 5px 5px 2px rgba(104, 104, 104, 0.3);
+}
+
+.searchbox__input-field, .select__options-gender {
+  box-shadow: inset 0 0 10px #ccc;
+}
+.searchbox__input-field:focus::placeholder {
+  color: transparent;
+}
+
+.searchbox__button {
+  margin-right: 30px;
+}
+
+.searchbox__input-field, .select__options-gender, .searchbox__button-btn, .filter__button-btn {
+  font-size: 16px;
+  padding: 10px;
+  height: 50px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+
+.btn {
+  background-color: #fc9e47;
+  width: 80px;
+  font-weight: 700;
+}
+
+/*---------------------characters--------------------*/
+
+.characters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+.characters__button {
+  display: flex;
+  justify-content: center;
+}
+
+.characters__button-btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.characters__card {
+  margin: 20px;
+  padding: 10px;
+  background-color: #282a42;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 5px 5px 5px 2px #b1b1b1;
+}
+
+.characters__card-img img {
+  width: 100%;
+  min-width: 100px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__row {
+  padding: 10px;
+}
+
+.card__header {
+  margin-bottom: 10px;
+}
+
+.card__header-text {
+  font-weight: 900;
+  font-size: 25px;
+  color: #fff;
+}
+
+.card__text {
+  color:rgb(143, 143, 143)
+}
+
+.card__text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.characters__button-btn {
+  display: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+/*------------error message------------*/
+.error-message {
+  display: none;
+}
+
+.error-message__img {
+  margin: 10px 0;
+}

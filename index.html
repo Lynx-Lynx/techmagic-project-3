@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>API</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__logo">
+            <img class="header__logo-img" src="img/logo.png" alt="logo">
+          </div>
+          <div class="header__text">
+            <h1>characters</h1>
+          </div>
+        </div>
+      </header>
+      <div class="searchbox">
+        <div class="searchbox__main">
+          <div class="searchbox__input">
+            <label for="search"
+              >Filter by name:
+              <input
+                class="searchbox__input-field"
+                type="text"
+                placeholder="Search for a character..."
+              />
+            </label>
+          </div>
+          <div class="searchbox__button">
+            <button class="searchbox__button-btn btn">Search</button>
+          </div>
+          <div class="searchbox__select-gender">
+            <label for="filter"
+              >Filter by gender:
+              <select class="select__options-gender" name="options">
+                <option value="female">female</option>
+                <option value="male">male</option>
+                <option value="genderless">genderless</option>
+                <option value="unknown">unknown</option>
+              </select>
+            </label>
+          </div>
+          <div class="searchbox__filter-button">
+            <button class="filter__button-btn btn">Filter</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="error-message">
+          <img class="error-message__img" src="img/404.png" alt="Not found" />
+        </div>
+        <div class="characters"></div>
+        <div class="characters__button">
+          <button class="characters__button-btn btn">Load more</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="js/modules/card.js"></script>
+  <script type="module" src="js/modules/state.js"></script>
+  <script type="module" src="js/modules/loader.js"></script>
+  <script type="module" src="js/main.js"></script>
+</html>
