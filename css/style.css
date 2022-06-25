@@ -50,6 +50,7 @@ label {
   top: 0px;
   align-self: flex-start;
   width: 100%;
+  z-index: 2;
 }
 
 .searchbox__main {
@@ -75,7 +76,7 @@ label {
 .searchbox__input-field, .select__options-gender, .searchbox__button-btn, .filter__button-btn {
   font-size: 16px;
   padding: 10px;
-  height: 50px;
+  height: 40px;
   margin-left: 5px;
   border-radius: 20px;
 }
@@ -137,7 +138,8 @@ label {
 }
 
 .card__text {
-  color:rgb(143, 143, 143)
+  color:rgb(143, 143, 143);
+  position: relative;
 }
 
 .card__text p:not(:last-child) {
@@ -149,6 +151,39 @@ label {
   padding: 10px;
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+.alive::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #17d617;
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+  bottom: 6px;
+}
+
+.dead::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 105px;
+  bottom: 6px;
+}
+
+.unknown::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #fc9e47;
+  border-radius: 50%;
+  position: absolute;
+  left: 133px;
+  bottom: 6px;
 }
 
 

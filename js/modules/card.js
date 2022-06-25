@@ -15,7 +15,9 @@ function createCharacterCard(characters) {
           <p>Gender: ${character.gender}</p>
           <p>Species: ${character.species}</p>
           <p>Location: ${character.location.name}</p>
-          <p>Status: ${character.status}</p>
+          <p class=${character.status === 'Alive' ? 'alive' 
+          : character.status === 'Dead'
+          ? 'dead' : 'unknown'}>Status: ${character.status}</p>
         </div>
       </div>
     </div>`
